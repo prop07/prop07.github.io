@@ -26,6 +26,10 @@ main {
   flex: 4;
   display: grid;
 }
+.copyright {
+  align-self: end;
+  text-align: center;
+}
 /*content*/
 .glass {
   background: white;
@@ -206,7 +210,6 @@ p,
 }
 
 .copyright {
-  display: grid;
   flex-direction: column;
   background: linear-gradient(
     to right bottom,
@@ -214,28 +217,33 @@ p,
     rgba(255, 255, 255, 0.3)
   );
   border-end-end-radius: 1rem;
-  margin-top: 0rem;
+  align-self: end;
+  padding: 0.5rem;
 }
 
 h3 {
   font-family: "poppins", sans-serif;
 }
 .copyright > h3 {
+  max-height: 3rem;
   justify-self: center;
   align-self: center;
   font-size: 0.8em;
   color: rgb(94, 94, 94);
 }
 p {
-  font-family: "poppins", sans-serif;
+  font-family: poppins, sans-serif;
+}
+.break {
+  display: inline;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1200px) {
   html {
-    font-size: 14px;
+    font-size: 16px;
   }
   .glass {
-    width: 80%;
+    width: 65%;
   }
 }
 
@@ -245,5 +253,38 @@ p {
   }
   .glass {
     width: 75%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 13px;
+  }
+  .glass {
+    width: 80%;
+  }
+
+  .cartoon {
+    height: 10rem;
+    width: 10rem;
+  }
+  .break {
+    display: block;
+  }
+}
+@media only screen and (max-width: 400px) {
+  html {
+    font-size: 10px;
+  }
+  .glass {
+    width: 86%;
+  }
+
+  .cartoon {
+    height: 8rem;
+    width: 8rem;
+  }
+  .break {
+    display: block;
   }
 }
