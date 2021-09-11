@@ -82,7 +82,6 @@ main {
   align-items: center;
   justify-self: center;
   text-align: center;
-  padding: 2rem 2rem;
   font-family: "poppins", sans-serif;
 }
 .linksize {
@@ -91,13 +90,14 @@ main {
   padding: 0.2rem 0.2rem;
   margin: 0rem 2rem;
 }
+.link > div {
+  padding: 0.9rem 0rem;
+}
 .nav {
   align-self: center;
   justify-self: center;
   text-align: center;
-  margin-top: 2rem;
 }
-
 /*hover effect*/
 .nav2 {
   font-family: "poppins", sans-serif;
@@ -244,6 +244,26 @@ p {
   }
   .glass {
     width: 65%;
+  }
+  .break {
+    display: block;
+  }
+  .nav {
+    display: none;
+  }
+  .button {
+    border: 1px solid red;
+    display: inline-block;
+    height: 3rem;
+    width: 4rem;
+    justify-self: right;
+    margin: 2rem 2rem;
+  }
+  .line {
+    height: 0.25rem;
+    width: 3rem;
+    background-color: black;
+    margin: 0.5rem;
   }
 }
 
