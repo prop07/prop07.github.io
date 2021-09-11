@@ -15,7 +15,7 @@ main {
   flex: 1;
   background: linear-gradient(
     to right bottom,
-    rgba(255, 255, 255, 0.7),
+    rgba(235, 232, 232, 0.7),
     rgba(255, 255, 255, 0.3)
   );
   border-radius: 1rem;
@@ -98,6 +98,9 @@ main {
   justify-self: center;
   text-align: center;
 }
+#burger-menu {
+  display: none;
+}
 /*hover effect*/
 .nav2 {
   font-family: "poppins", sans-serif;
@@ -147,6 +150,23 @@ main {
   justify-self: center;
   align-self: center;
   position: relative;
+  animation: cartoon 4s infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes cartoon {
+  25% {
+    transform: rotate(7deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-7deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 /*typewriter*/
@@ -237,7 +257,11 @@ p {
 .break {
   display: inline;
 }
-
+.first,
+.second,
+.third {
+  transition: 150ms ease-out;
+}
 @media only screen and (max-width: 1200px) {
   html {
     font-size: 16px;
@@ -251,19 +275,65 @@ p {
   .nav {
     display: none;
   }
-  .button {
-    border: 1px solid red;
-    display: inline-block;
-    height: 3rem;
-    width: 4rem;
+  .nav.responsive {
+    display: grid;
+    justify-items: end;
+    position: absolute;
+    gap: 1rem;
+    top: 6rem;
+    right: 1rem;
+  }
+  .boady {
+    grid-template-rows: 5fr 1fr 1fr;
+  }
+  .first.responsive {
+    transform: rotate(45deg) translate(4px, 4px);
+  }
+  .third.responsive {
+    transform: rotate(-45deg) translate(4px, -4px);
+  }
+  .second.responsive {
+    transform: translateX(5px);
+    display: none;
+  }
+  .cartoon {
+    height: 18rem;
+    width: 18rem;
+    animation: cartoon 4s infinite;
+    animation-timing-function: linear;
+  }
+  @keyframes cartoon {
+    25% {
+      transform: rotate(7deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    75% {
+      transform: rotate(-7deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  #burger-menu {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
     justify-self: right;
-    margin: 2rem 2rem;
+    border: none;
+    background-color: transparent;
+  }
+  #burger-menu:hover {
+    cursor: pointer;
   }
   .line {
-    height: 0.25rem;
+    height: 0.3rem;
     width: 3rem;
     background-color: black;
-    margin: 0.5rem;
+    margin: 0.6rem;
   }
 }
 
