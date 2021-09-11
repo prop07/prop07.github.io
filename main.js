@@ -39,3 +39,24 @@ function erase() {
 document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
   if(textArray.length) setTimeout(type, newTextDelay + 250);
 });
+
+function burgerAction() {
+  const menu = document.querySelector('#burger-menu');
+const nav = document.querySelector('#nav');
+const first = document.querySelector('.first');
+const second = document.querySelector('.second');
+const third = document.querySelector('.third');
+console.log(nav)
+if (nav.className === "nav") {
+nav.className += " responsive";
+first.className += ' responsive';
+second.className += ' responsive';
+third.className += ' responsive';
+
+} else {
+nav.className = "nav";
+first.className = 'first line';
+second.className = 'second line';
+third.className = 'third line';
+}
+}
