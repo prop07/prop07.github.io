@@ -283,8 +283,11 @@ p {
     top: 6rem;
     right: 1rem;
   }
+  .image {
+    margin-top: 12rem;
+  }
   .boady {
-    grid-template-rows: 5fr 1fr 1fr;
+    grid-template-rows: 3fr 1fr 1fr;
   }
   .first.responsive {
     transform: rotate(45deg) translate(4px, 4px);
@@ -364,15 +367,15 @@ p {
 }
 @media only screen and (max-width: 400px) {
   html {
-    font-size: 10px;
+    font-size: 12px;
   }
   .glass {
     width: 86%;
   }
 
   .cartoon {
-    height: 8rem;
-    width: 8rem;
+    height: 10rem;
+    width: 10rem;
   }
   .break {
     display: block;
